@@ -4,12 +4,12 @@ import jasmine from "gulp-jasmine";
 import eslint from "gulp-eslint";
 import del from "del";
 
-gulp.task('clean', () => del(['lib/']));
+gulp.task('clean', () => del(['index.js']));
 
 gulp.task('build', ['clean'], () => {
-    return gulp.src('src/**.js')
+    return gulp.src('src/index.js')
         .pipe(babel())
-        .pipe(gulp.dest('lib'));
+        .pipe(gulp.dest('./'));
 });
 
 gulp.task('watch', ['build'], () => {

@@ -30,7 +30,8 @@
   "bin": "bin/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "gulp build"
+    "prepublish": "gulp build",
+    "preinstall": "gulp build"
   },
   "dependencies": {
     "phantom": "^2.0.x",

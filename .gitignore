@@ -4,3 +4,4 @@
 .vscode
 #tmp
 #tests
+package-lock.json

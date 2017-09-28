@@ -145,7 +145,7 @@ function saveBuffer(dstPath, buffer) {
  * @returns {Promise<Buffer>} resolved with image data
  */
 function convert(instance, srcPath, size) {
-    return Promise.all([instance.createPage(), fileToBase64(srcPath)])
+    return Promise.all([instance.createPage(), fileToDataUrl(srcPath)])
         .then(([page, pageContent]) => {
             const closePage = () => {
                 if (page) {
@@ -206,15 +206,14 @@ function checkEvalError(result) {
  * @param {string} filePath
  * @returns {Promise.<string>} resolved with base64 file data
  */
-function fileToBase64(filePath) {
-    const dataPrefix = 'data:image/svg+xml;base64,';
+function fileToDataUrl(filePath) {
+    const dataPrefix = 'data:image/svg+xml;utf8,';
     return new Promise((resolve, reject) => {
-        fs.readFile(filePath, (error, data) => {
+        fs.readFile(filePath, "utf8", (error, data) => {
             if (error) {
                 return reject(error);
             }
-            var base64Data = new Buffer(data).toString('base64');
-            resolve(dataPrefix + base64Data);
+            resolve(dataPrefix + data);
         });
     });
 }

@@ -23,9 +23,6 @@ svg2png()//promise to get instance
   instance.render(//pass SVG string as an input
 `<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512">
 <defs id="SvgjsDefs1001"></defs>
-<svg id="SvgjsSvg1002" width="2" height="0" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0">
-<polyline id="SvgjsPolyline1003" points="0,0"></polyline>
-<path id="SvgjsPath1004" d="M0 0 "></path></svg>
 <rect id="SvgjsRect1006" width="512" height="512" fill="#ffffff"></rect>
 <ellipse id="SvgjsEllipse1007" rx="68.5" ry="73" cx="300.5" cy="235" transform="matrix(0.9743700647852352,0.224951054343865,-0.224951054343865,0.9743700647852352,60.56529330284505,-61.57475705486172)" stroke-opacity="0.8" stroke="#000000" stroke-width="2" fill-opacity="0.8" fill="#0a0a0a"></ellipse>
 </svg>`)

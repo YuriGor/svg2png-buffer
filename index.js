@@ -18,12 +18,12 @@ var DEBUG = (typeof v8debug === 'undefined' ? 'undefined' : _typeof(v8debug)) ==
 
 /**
  * Promise phantom instance for later usage
- * @return {object} Contains phantom inctance ready to use, and several
+ * @return {object} Contains phantom inctance ready to use
  */
 module.exports = function () {
     return _phantom2.default.create().then(function (instance) {
         return {
-            convert: function convert(svgString) {
+            render: function render(svgString) {
                 var size = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
                 return instance.createPage().then(function (page) {

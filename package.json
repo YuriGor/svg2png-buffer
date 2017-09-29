@@ -31,7 +31,7 @@
     {
       "name": "Yuri Gor",
       "email": "yuri.horus@gmail.comm"
-    },
+    }
   ],
   "engines": {
     "node": ">=0.12"
